@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseFit Pro - Flagship Biometric Smartwatch</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed-dim": "#00dbe9",
+          "surface-container": "#1c2028",
+          "surface-bright": "#353942",
+          "inverse-on-surface": "#2c3039",
+          "surface-container-low": "#181c24",
+          "tertiary": "#6af7ba",
+          "inverse-primary": "#006d34",
+          "surface": "#0f131c",
+          "primary-fixed": "#62ff96",
+          "surface-container-high": "#262a33",
+          "surface-variant": "#31353e",
+          "secondary-fixed": "#7df4ff",
+          "secondary-container": "#00eefc",
+          "inverse-surface": "#dfe2ee",
+          "on-surface": "#dfe2ee",
+          "on-primary-fixed-variant": "#005226",
+          "on-tertiary-fixed-variant": "#005236",
+          "secondary": "#00F0FF",
+          "on-tertiary-fixed": "#002113",
+          "primary-fixed-dim": "#18e376",
+          "primary": "#46fc8b",
+          "on-secondary-fixed-variant": "#004f54",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-background": "#dfe2ee",
+          "on-primary": "#003918",
+          "on-error-container": "#ffdad6",
+          "on-primary-fixed": "#00210b",
+          "surface-container-highest": "#31353e",
+          "surface-dim": "#0f131c",
+          "on-error": "#690005",
+          "on-surface-variant": "#bacbb9",
+          "error-container": "#93000a",
+          "on-secondary-container": "#00686f",
+          "on-primary-container": "#005d2b",
+          "tertiary-container": "#49da9f",
+          "surface-tint": "#18e376",
+          "surface-container-lowest": "#0a0e16",
+          "background": "#0f131c",
+          "primary-container": "#05df72",
+          "on-tertiary-container": "#005c3e",
+          "on-secondary-fixed": "#002022",
+          "outline-variant": "#3c4a3d",
+          "on-tertiary": "#003824",
+          "on-secondary": "#00363a",
+          "outline": "#859585",
+          "error": "#ffb4ab",
+          "tertiary-fixed": "#6ffbbe"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "2rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Space Grotesk"],
+          "body-sm": ["Inter"],
+          "metric-md": ["Space Grotesk"],
+          "metric-xl": ["Space Grotesk"],
+          "display-hero": ["Space Grotesk"],
+          "display-hero-mobile": ["Space Grotesk"],
+          "headline-sm": ["Space Grotesk"],
+          "label-caps": ["Space Grotesk"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "body-lg": ["Inter"],
+          "label-ui": ["Inter"],
+          "body-md": ["Inter"],
+          "headline-md": ["Space Grotesk"],
+          "label-numeric": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "metric-md": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "metric-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+          "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+          "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+          "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "label-ui": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "label-numeric": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+        }
+      }
+    }
+  </script>
+<style>
+    .glass-panel {
+      background: rgba(15, 19, 28, 0.76);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel-glow {
+      background: rgba(15, 19, 28, 0.88);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 0 35px -10px rgba(5, 223, 114, 0.22);
+      border: 1px solid rgba(5, 223, 114, 0.28);
+    }
+    .neon-glow-btn {
+      box-shadow: 0 0 24px -2px rgba(5, 223, 114, 0.45);
+    }
+    @keyframes pulse-diode {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
+    .diode-pulse {
+      animation: pulse-diode 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- ========================================== -->
+<!-- TOP APP BAR (Shared Components JSON Anchor) -->
+<!-- ========================================== -->
+<header class="docked full-width top-0 fixed z-50 bg-surface-dim/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-6 md:px-10 max-w-7xl mx-auto h-16">
+<!-- Brand Logo Anchor -->
+<a class="flex items-center gap-3" href="#">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-primary-container" data-icon="ecg_heart">ecg_heart</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface dark:text-on-surface">PulseFit Pro</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<!-- Active Nav: Overview -->
+<a class="text-primary-container dark:text-primary-container border-b-2 border-primary-container font-label-caps text-label-caps uppercase tracking-wider pb-1 hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#overview">
+          Overview
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary dark:hover:text-primary" href="#sensor-tech">
+          Sensor Tech
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary dark:hover:text-primary" href="#specifications">
+          Specifications
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary dark:hover:text-primary" href="#reviews">
+          Reviews
+        </a>
+</nav>
+<!-- Actions Cluster -->
+<div class="flex items-center gap-4">
+<button aria-label="Configure options" class="hidden lg:flex items-center text-on-surface-variant hover:text-primary transition-colors duration-150 font-label-caps text-label-caps uppercase tracking-wider">
+          Configure
+        </button>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider font-bold bg-primary-container text-surface-container-lowest neon-glow-btn hover:brightness-110 active:scale-[0.98] transition-all" href="#preorder">
+          Pre-Order Now ($299)
+        </a>
+<!-- Trailing Icon Action -->
+<button aria-label="Cart" class="relative p-2 rounded-lg bg-surface-container text-on-surface hover:text-primary-container border border-outline-variant/40 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary-container text-surface-container-lowest text-[10px] font-bold flex items-center justify-center">1</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Hero Section -->
+<main class="pt-24 md:pt-32 pb-16">
+<div class="max-w-7xl mx-auto px-6 md:px-10" id="overview">
+<!-- Upper Hero Intro -->
+<div class="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-outline-variant/50 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container diode-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary-container">NEW GEN 4 SENSOR CORE</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">FDA-CLEARED ECG</span>
+</div>
+<h1 class="hidden md:block font-display-hero text-display-hero text-on-surface font-bold tracking-tight mb-6">
+          Precision on your wrist.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-primary-fixed to-secondary">Power in your pulse.</span>
+</h1>
+<h1 class="md:hidden font-display-hero-mobile text-display-hero-mobile text-on-surface font-bold tracking-tight mb-6">
+          Precision on wrist.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary">Power in pulse.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
+          Machined from grade 5 aerospace titanium, fused with sapphire crystal, and driven by the BioPulse 4.0 optical telemetry engine.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-primary-container text-surface-container-lowest font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 neon-glow-btn hover:brightness-110 active:scale-[0.98] transition-all" href="#preorder">
+<span>Order PulseFit Pro</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<button class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-surface-container-high/60 border border-outline-variant/50 text-on-surface hover:border-outline font-headline-sm text-headline-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-primary-container" data-icon="play_circle">play_circle</span>
+<span>Watch Keynote</span>
+</button>
+</div>
+</div>
+<!-- Hero Visual Showcase Bento -->
+<div class="relative glass-panel-glow rounded-3xl p-6 md:p-12 mb-14 overflow-hidden">
+<!-- Background Ambient Accent Glow -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Product Visual Centerpiece -->
+<div class="lg:col-span-7 flex flex-col items-center justify-center relative">
+<div class="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden glass-panel flex items-center justify-center p-4">
+<img alt="PulseFit Pro Flagship Smartwatch Display" class="w-full h-full object-cover rounded-xl" data-alt="Photorealistic studio shot of the ultra-luxurious PulseFit Pro flagship smartwatch hovering in deep space with moody obsidian lighting. The titanium brushed bezel shines with subtle metallic luster, complemented by a vivid holographic screen rendering real-time ECG spikes and heart rate graphs in neon cyber teal and vivid mint accents. High-end luxury industrial design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6UA6Lu9Dc5AsInED7mji6-fdRs5ZmQyULbdgB2Wz9O8wZNFOm4IE82w2xhpzsmyUysYTyfoq9yP90leyRVJw3p4zDn_we_OtoLqndExRofpDv41fL6eA5LgKQmZeNCPqBNUZLn_3QTKAAaarwPdhao7ARntQWZVwv6zHhsAB5Y-1P3cxwFhNYKdZrMrPDBwvwvA4ASDWG_8R906t7EIw02u9N_K8jyGeRCnoUOgBM3VCvvULVxb7BWQ"/>
+<!-- Floating Active Live Telemetry Tag -->
+<div class="absolute bottom-6 left-6 right-6 glass-panel rounded-xl p-4 flex items-center justify-between border border-outline-variant/40">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary-container diode-pulse"></div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Live Heart Rate</div>
+<div class="font-label-numeric text-label-numeric font-bold text-primary">58 <span class="font-caption text-caption text-on-surface-variant">BPM (Resting)</span></div>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">HRV Recovery</div>
+<div class="font-label-numeric text-label-numeric font-bold text-tertiary">94 <span class="font-caption text-caption text-primary">Optimal</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Specs Summary & Dynamic Telemetry Readout -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary-container tracking-wider">Engineering Specs</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1 mb-3">Formed in Fire. Engineered for the Extreme.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Every contour is precision-milled from a solid billet of Grade 5 Titanium, paired with diamond-polished Sapphire Crystal capable of withstanding 50 atmospheres of dynamic ocean pressure.
+              </p>
+</div>
+<!-- Key Metric Stat Pills (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-3.5">
+<div class="glass-panel p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-primary-container mb-1">
+<span class="material-symbols-outlined" data-icon="battery_charging_full">battery_charging_full</span>
+<span class="font-label-caps text-label-caps uppercase">Endurance</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">14-Day</div>
+<div class="font-caption text-caption text-on-surface-variant">Continuous Active Tracking</div>
+</div>
+<div class="glass-panel p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+<span class="font-label-caps text-label-caps uppercase">Immersion</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">50m / 5ATM</div>
+<div class="font-caption text-caption text-on-surface-variant">Open Ocean Certified</div>
+</div>
+<div class="glass-panel p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-primary-container mb-1">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-label-caps text-label-caps uppercase">Medical Grade</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ECG Core</div>
+<div class="font-caption text-caption text-on-surface-variant">Afib Detection Algorithmic Engine</div>
+</div>
+<div class="glass-panel p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-tertiary mb-1">
+<span class="material-symbols-outlined" data-icon="satellite_alt">satellite_alt</span>
+<span class="font-label-caps text-label-caps uppercase">Navigation</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">L1 + L5</div>
+<div class="font-caption text-caption text-on-surface-variant">Dual-Band Precision GNSS</div>
+</div>
+</div>
+<!-- Mini Live Status Badge -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/50 border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">30-Day Risk-Free Field Test &amp; Trial</span>
+</div>
+<span class="font-label-numeric text-label-numeric font-bold text-primary-container">$299 USD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- BENTO GRID SECTION: Sensor Tech & Features -->
+<!-- ========================================== -->
+<section class="py-16 md:py-24 bg-surface-container-lowest/60 border-y border-outline-variant/20" id="sensor-tech">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary-container">BioPulse 4.0 Subsystems</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-2">Sensory architecture beyond laboratory thresholds.</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+            Eight photodiodes. Quad micro-LED emitters. Sub-millimeter laser arrays tuned to penetrate 3.2mm of dermal tissue for uninterrupted pulse oximetry.
+          </p>
+</div>
+<!-- Master Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Card 1: Titanium & Sapphire (Spans 2 cols on lg) -->
+<div class="lg:col-span-2 glass-panel p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden group hover:border-primary-container/40 transition-all">
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps uppercase text-primary-container">Materials Engineering</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="diamond">diamond</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Aerospace Grade 5 Titanium + Sapphire Lens</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                Impervious to salt spray, direct stone strikes, and thermal shock from -20°C to +55°C. Coated with anti-reflective oleophobic nano-finish.
+              </p>
+</div>
+<div class="mt-8 relative h-48 rounded-xl overflow-hidden border border-outline-variant/30">
+<img alt="Titanium Watch Case Detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro close-up photograph showcasing the brushed aerospace-grade titanium bezel of a luxury fitness smartwatch. The bevel catches high-contrast rim lighting, revealing precision laser-etched metric dials and the flawless anti-reflective sapphire crystal glass face in obsidian and deep slate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj9NNSycw9TflMEoK-H6l2OYoVzN9pHnQ2HBBi6Glj2rpcmibLhmkgbhnQJyfWVUnDYgqlB_in3_6FEzq1JudeA4DhJZ_cbAXxCRNLsIsK1l5vcactEEPkP_StkblwzgaF8itS2vHwbohxPmNinco2rQf_Z_aJV7AS4h_tav8AvwmQK2WpcAH1FkLTCey3AF_LcRzAVvMadNxy-BuMve0T49jNZR0PENpUuNeqaeDJaco086alAo-fUg"/>
+</div>
+</div>
+<!-- Card 2: BioPulse 4.0 Optical Heart & SpO2 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between group hover:border-primary-container/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps uppercase text-primary-container">Optical Array</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="vital_signs">vital_signs</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">BioPulse 4.0</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                Continuous 24/7 blood-oxygen monitoring (SpO2) and micro-second arrhythmia detection during maximal VO2 efforts.
+              </p>
+</div>
+<div class="bg-surface-container-high/60 p-4 rounded-xl border border-outline-variant/40">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current SpO2</span>
+<span class="font-label-numeric text-label-numeric font-bold text-primary-container">99.2%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary rounded-full" style="width: 98%"></div>
+</div>
+<span class="font-caption text-caption text-primary flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                Normal atmospheric baseline
+              </span>
+</div>
+</div>
+<!-- Card 3: Deep Sleep & HRV Recovery Score -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between group hover:border-primary-container/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps uppercase text-tertiary">Neural Recovery</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="bedtime">bedtime</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">HRV &amp; Sleep Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                Automatic staging of REM, Light, Deep sleep, and nightly skin temperature variance to generate your daily readiness rating.
+              </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/40">
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption text-caption text-on-surface-variant">Daily Strain Readiness</span>
+<span class="font-label-numeric text-label-numeric font-bold text-primary-container">92 / 100</span>
+</div>
+<div class="text-xs text-on-surface-variant">Prime central nervous system status for high anaerobic threshold loads.</div>
+</div>
+</div>
+<!-- Card 4: 120+ Workout Modes with Auto-Detection (Spans full on mobile/tablet, 4 on desktop) -->
+<div class="md:col-span-3 lg:col-span-4 glass-panel p-8 rounded-2xl flex flex-col lg:flex-row items-center justify-between gap-8 group hover:border-primary-container/40 transition-all">
+<div class="max-w-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="sprint">sprint</span>
+<span class="font-label-caps text-label-caps uppercase text-primary-container">Intelligent Telemetry</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-3">120+ Sports Protocols with Auto-Detection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Whether dropping into a cold open-water 3.8km swim, climbing 3,000 vertical meters, or crushing threshold power on a smart trainer, PulseFit Pro recognizes transition states in under 4 seconds without touching a single button.
+              </p>
+</div>
+<!-- Activity Pill cluster -->
+<div class="flex flex-wrap gap-2.5 max-w-md">
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="pool">pool</span> Open Water Swim
+              </span>
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="directions_bike">directions_bike</span> Power Meter Cycling
+              </span>
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="hiking">hiking</span> High Altitude Trek
+              </span>
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="fitness_center">fitness_center</span> Olympic Weightlifting
+              </span>
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="rowing">rowing</span> Ergometer Crew
+              </span>
+<span class="px-3.5 py-2 rounded-lg bg-surface-container-high border border-outline-variant/40 font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="more_horiz">more_horiz</span> 115 More
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- TECHNICAL SPECIFICATIONS TABULAR SECTION   -->
+<!-- ========================================== -->
+<section class="py-16 md:py-24" id="specifications">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-label-caps text-label-caps uppercase text-primary-container tracking-wider">Precision Metric Grid</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-2 mb-3">Hardware Specifications</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Calibrated for elite performance standards and verified by clinical sports medicine laboratories.</p>
+</div>
+<div class="glass-panel rounded-2xl overflow-hidden border border-outline-variant/40 max-w-4xl mx-auto">
+<div class="divide-y divide-outline-variant/20">
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Case Diameter &amp; Finish</span>
+<span class="font-label-numeric text-label-numeric text-primary-container">45mm Aerospace Grade 5 Titanium (DLC Coated)</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors bg-surface-container-low/40">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Display Matrix</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">1.43" AMOLED, 466 x 466 px, 2,000 Nits Peak Sunlight</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Protection Matrix</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Sapphire Crystal Bezel + 5ATM (50m Submersion)</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors bg-surface-container-low/40">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Biometric Sensors</span>
+<span class="font-label-numeric text-label-numeric text-primary-container">BioPulse 4.0 ECG Diode, Optical SpO2, Skin Temp, EDA</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Satellite Positioning</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Dual-Frequency Multi-GNSS (GPS, GLONASS, Galileo, BeiDou)</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors bg-surface-container-low/40">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Battery Architecture</span>
+<span class="font-label-numeric text-label-numeric text-primary">500 mAh Li-Po, 14 Days Typical, 36 Hrs Continuous Multi-Band GPS</span>
+</div>
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-high/40 transition-colors">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Telemetry Weight</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">42.5 grams (without fluorocarbon sport band)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SOCIAL PROOF & ATHLETE TESTIMONIALS       -->
+<!-- ========================================== -->
+<section class="py-16 md:py-24 bg-surface-container-lowest/80 border-t border-outline-variant/30" id="reviews">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<!-- Section Header with aggregate score -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">4.9 / 5.0</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Trusted by 18,000+ World-Class Athletes</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 md:mt-0">
+            From Ironman World Championships to high-altitude mountaineering expeditions.
+          </p>
+</div>
+<!-- Reviews Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1: Olympic Triathlete -->
+<div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border border-outline-variant/40">
+<div>
+<div class="flex items-center gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface mb-6 italic">
+                "The heart rate variance and nocturnal recovery algorithms are noticeably more dependable than any competing device I’ve tested over 10 years of professional racing. It’s my daily training standard."
+              </blockquote>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-primary-container/40">
+<img alt="Marcus Vance Portrait" class="w-full h-full object-cover" data-alt="Editorial portrait of a high-performance male triathlete with intense focused expression after an ocean swim, bathed in dramatic cool cyan backlight. Minimalist athletic aesthetic with moody dark atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3yDlCC6oXIPK8YOwAkgo4oCnul3npO8B6MkJrECEeRAmf2BCXK_xzJJY6OGnePurzaxRQZYECQzdq8yvsh8hpdrhdSpWQk5f4ol-kWvrOmgJT9mRwhSl--qTPecvRtf_hSlP2A7hRGWDlYhkiie6NoaAFDhsWqx_Y4HcSGvH_7rTUO3JI2SpuMhyS3yg690afUH7i8HWeQMlAmr4EDqh-ChtQKCFOMHJCKX20HDUMPtjO0Lb6ZK5BYg"/>
+</div>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">Marcus Vance</div>
+<div class="font-caption text-caption text-primary">3x Olympic Triathlete &amp; Coach</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2: Clinical Cardiologist -->
+<div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border border-outline-variant/40">
+<div>
+<div class="flex items-center gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface mb-6 italic">
+                "As a sports cardiologist, seeing a consumer wearable capture signal fidelity this pristine without skin-contact noise artifacts is a revolutionary milestone for preventative telemetry."
+              </blockquote>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-secondary/40">
+<img alt="Dr. Elena Rostova Portrait" class="w-full h-full object-cover" data-alt="High-end editorial studio portrait of a female cardiologist wearing modern clinical scrubs against a dark slate textured backdrop with delicate turquoise rim lighting. Sophisticated and authoritative medical expert portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVmT_gRWgVmBPzZgMtzF73kotykd8Q9HGBXOJQCq6zdS0XAKrfSzIk6rk_dh0Fk-pMf4bWn21GtmnyQsDEUtPTOlRzazMtCsXgNdeJ82YdJEY39fabiDK6TXPiUbV4XiPJNA-l74zf6l7bta6hw0YKwdGP3iOZsVMEZQrAr5w6GKtTnLMohGVKoYqJFjiT5SDFkFslX-RFCPDw-JLu3cbsw4DWnBu50UwRLJZEiBsPUsG6UxtYhLruCQ"/>
+</div>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">Dr. Elena Rostova, MD</div>
+<div class="font-caption text-caption text-primary-container">Director of Sports Cardiology, Zurich</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3: Tech Editor -->
+<div class="glass-panel p-6 rounded-2xl flex flex-col justify-between border border-outline-variant/40">
+<div>
+<div class="flex items-center gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface mb-6 italic">
+                "PulseFit Pro completely eliminates wearable battery anxiety while out-speccing devices twice its price. The titanium chassis finish is purely exquisite."
+              </blockquote>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant">
+<img alt="Liam Chen Portrait" class="w-full h-full object-cover" data-alt="Professional studio headshot of a modern tech journalist in charcoal turtleneck against an obsidian studio background with subtle cool illumination. Clean sharp lighting showcasing editorial credibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmIiBiGYtMqmbcdryvdVzCPFQWi6oBpL5Oiq-b3PONONf2vmi3WARFMrJ6kzzfiJDfvdyMVj-4xw08-TdiavsMD8Ta_LceIAHFKo7OQkRy-ZyLMzGuDBrhhqgwyjERr_TW1oL0X44wbfJA6ZwxaiIqU0_3kY2bk-WIq5NViBPfYpqfXj_h4-0mn1w0cBsYMmntJ7XFCOtGoMwKjJk3Hik5NE_wxaSaGNxY6zLzBwzyHor-4NwFnPdlyQ"/>
+</div>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">Liam Chen</div>
+<div class="font-caption text-caption text-on-surface-variant">Senior Hardware Lead, WIRED Tech Lab</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- PRE-ORDER CONVERSION BANNER (HIGH-OCTANE)  -->
+<!-- ========================================== -->
+<section class="py-16 md:py-24 relative overflow-hidden" id="preorder">
+<!-- Glow ambient background -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-dim via-surface-container-lowest to-surface-dim pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary-container/15 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+<div class="glass-panel-glow rounded-3xl p-8 md:p-14 text-center border border-primary-container/30">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-primary-container/40 mb-6">
+<span class="w-2 h-2 rounded-full bg-error diode-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">BATCH 01 PRODUCTION • 84% ALLOCATED</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-4">
+            Claim Your PulseFit Pro
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8">
+            Pre-order now to secure early shipment priority, complimentary titanium Milanese link band ($99 value), and lifetime VIP cloud telemetry access.
+          </p>
+<!-- Pre-order Specs / Selector Preview -->
+<div class="max-w-md mx-auto mb-8 p-4 rounded-2xl bg-surface-container-lowest/80 border border-outline-variant/40 flex items-center justify-between">
+<div class="text-left">
+<div class="font-body-md text-body-md font-bold text-on-surface">Launch Edition Package</div>
+<div class="font-caption text-caption text-primary">Ships Worldwide November 2025</div>
+</div>
+<div class="text-right">
+<div class="font-label-numeric text-label-numeric font-bold text-primary-container text-xl">$299</div>
+<div class="font-caption text-caption text-outline line-through">$399 MSRP</div>
+</div>
+</div>
+<!-- Conversion Button -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-10 py-4 rounded-full bg-primary-container text-surface-container-lowest font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-3 neon-glow-btn hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span>Reserve With Instant Checkout</span>
+</button>
+</div>
+<div class="mt-6 flex flex-wrap items-center justify-center gap-6 font-caption text-caption text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-xs text-primary-container" data-icon="check">check</span> Free Global Express Shipping</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-xs text-primary-container" data-icon="check">check</span> 2-Year Hardware Warranty</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-xs text-primary-container" data-icon="check">check</span> Zero Mandatory Subscription</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================== -->
+<!-- FOOTER (Shared Components JSON Anchor)     -->
+<!-- ========================================== -->
+<footer class="full-width bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="w-full max-w-7xl mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Logo and Copyright block -->
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="ecg_heart">ecg_heart</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">PulseFit Pro</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant text-center md:text-left">
+          © 2025 PulseFit Pro Biometrics Inc. All rights reserved. Precision engineered for elite performance.
+        </p>
+</div>
+<!-- Footer Navigation Links -->
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Privacy Policy
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Terms of Service
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Biometric Compliance
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Telemetry API
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Support
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container dark:hover:text-primary-container active:opacity-80" href="#">
+          Contact
+        </a>
+</div>
+</div>
+</footer>
+</body></html>

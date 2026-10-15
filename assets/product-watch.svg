@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <radialGradient id="mintGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#080C14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metalCase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="screenGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#05080F"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <circle cx="300" cy="375" r="260" fill="url(#mintGlow2)"/>
+
+  <g filter="url(#shadow2)">
+    <!-- Top Strap -->
+    <path d="M 215,60 Q 215,30 300,30 Q 385,30 385,60 L 375,220 L 225,220 Z" fill="#111827" stroke="#1F2937" stroke-width="2"/>
+    <!-- Bottom Strap -->
+    <path d="M 225,530 L 375,530 L 385,690 Q 385,720 300,720 Q 215,720 215,690 Z" fill="#111827" stroke="#1F2937" stroke-width="2"/>
+
+    <!-- Crown & Buttons -->
+    <rect x="445" y="295" width="14" height="64" rx="5" fill="#475569" stroke="#1E293B" stroke-width="2"/>
+    <rect x="443" y="390" width="8" height="52" rx="4" fill="#334155"/>
+
+    <!-- Main Titanium Watch Case -->
+    <rect x="155" y="200" width="290" height="350" rx="68" fill="url(#metalCase)" stroke="#475569" stroke-width="3"/>
+    <rect x="160" y="205" width="280" height="340" rx="64" fill="#0F172A"/>
+
+    <!-- Display Screen -->
+    <rect x="180" y="225" width="240" height="300" rx="48" fill="url(#screenGlass)" stroke="#1E293B" stroke-width="2"/>
+
+    <!-- Watch UI Elements -->
+    <text x="300" y="265" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#34D399" text-anchor="middle" letter-spacing="2">
+      PULSEFIT PRO SENSOR ACTIVE
+    </text>
+
+    <!-- Concentric Bio-Telemetry Activity Rings -->
+    <circle cx="300" cy="360" r="65" fill="none" stroke="#1F2937" stroke-width="9"/>
+    <circle cx="300" cy="360" r="65" fill="none" stroke="#10B981" stroke-width="9" stroke-linecap="round" stroke-dasharray="408" stroke-dashoffset="80"/>
+
+    <circle cx="300" cy="360" r="48" fill="none" stroke="#1F2937" stroke-width="9"/>
+    <circle cx="300" cy="360" r="48" fill="none" stroke="#38BDF8" stroke-width="9" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="60"/>
+
+    <circle cx="300" cy="360" r="31" fill="none" stroke="#1F2937" stroke-width="9"/>
+    <circle cx="300" cy="360" r="31" fill="none" stroke="#A855F7" stroke-width="9" stroke-linecap="round" stroke-dasharray="194" stroke-dashoffset="40"/>
+
+    <text x="300" y="367" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">
+      100%
+    </text>
+
+    <!-- Metrics at Bottom of Watch -->
+    <text x="240" y="465" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">12,480</text>
+    <text x="240" y="480" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B">STEPS TODAY</text>
+
+    <text x="360" y="465" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#34D399" text-anchor="end">54 MAX</text>
+    <text x="360" y="480" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B" text-anchor="end">VO2 CARDIO</text>
+  </g>
+</svg>

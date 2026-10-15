@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseFit Pro — Precision Engineered Performance</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS via CDN with form & container query plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim as mandated -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed-dim": "#00dbe9",
+          "surface-container": "#1c2028",
+          "surface-bright": "#353942",
+          "inverse-on-surface": "#2c3039",
+          "surface-container-low": "#181c24",
+          "tertiary": "#6af7ba",
+          "inverse-primary": "#006d34",
+          "surface": "#0f131c",
+          "primary-fixed": "#62ff96",
+          "surface-container-high": "#262a33",
+          "surface-variant": "#31353e",
+          "secondary-fixed": "#7df4ff",
+          "secondary-container": "#00eefc",
+          "inverse-surface": "#dfe2ee",
+          "on-surface": "#dfe2ee",
+          "on-primary-fixed-variant": "#005226",
+          "on-tertiary-fixed-variant": "#005236",
+          "secondary": "#d3fbff",
+          "on-tertiary-fixed": "#002113",
+          "primary-fixed-dim": "#18e376",
+          "primary": "#46fc8b",
+          "on-secondary-fixed-variant": "#004f54",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-background": "#dfe2ee",
+          "on-primary": "#003918",
+          "on-error-container": "#ffdad6",
+          "on-primary-fixed": "#00210b",
+          "surface-container-highest": "#31353e",
+          "surface-dim": "#0f131c",
+          "on-error": "#690005",
+          "on-surface-variant": "#bacbb9",
+          "error-container": "#93000a",
+          "on-secondary-container": "#00686f",
+          "on-primary-container": "#005d2b",
+          "tertiary-container": "#49da9f",
+          "surface-tint": "#18e376",
+          "surface-container-lowest": "#0a0e16",
+          "background": "#0f131c",
+          "primary-container": "#05df72",
+          "on-tertiary-container": "#005c3e",
+          "on-secondary-fixed": "#002022",
+          "outline-variant": "#3c4a3d",
+          "on-tertiary": "#003824",
+          "on-secondary": "#00363a",
+          "outline": "#859585",
+          "error": "#ffb4ab",
+          "tertiary-fixed": "#6ffbbe"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "2rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Space Grotesk"],
+          "body-sm": ["Inter"],
+          "metric-md": ["Space Grotesk"],
+          "metric-xl": ["Space Grotesk"],
+          "display-hero": ["Space Grotesk"],
+          "display-hero-mobile": ["Space Grotesk"],
+          "headline-sm": ["Space Grotesk"],
+          "label-caps": ["Space Grotesk"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "body-lg": ["Inter"],
+          "label-ui": ["Inter"],
+          "body-md": ["Inter"],
+          "headline-md": ["Space Grotesk"],
+          "label-numeric": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "metric-md": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "metric-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+          "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+          "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+          "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "label-ui": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom subtle glass treatments & rim highlights */
+    .glass-surface-1 {
+      background: rgba(17, 22, 34, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-surface-2 {
+      background: rgba(22, 28, 40, 0.90);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .neon-glow-green {
+      box-shadow: 0 0 28px -4px rgba(5, 223, 114, 0.45);
+    }
+    .pulse-ring {
+      animation: pulse-ring-animation 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring-animation {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.2; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- ==================== SHARED COMPONENT: TopNavBar ==================== -->
+<header class="docked full-width top-0 fixed z-50 bg-surface-dim/85 backdrop-blur-md border-b border-outline-variant/40">
+<div class="flex justify-between items-center w-full px-6 md:px-10 max-w-7xl mx-auto h-16">
+<!-- Brand Logo Anchor -->
+<a class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface flex items-center gap-2 group" href="#">
+<span class="w-3 h-3 rounded-full bg-primary-container inline-block shadow-[0_0_12px_#05df72]"></span>
+<span>PulseFit Pro</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary duration-150" href="#overview">Overview</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary duration-150" href="#sensors">Sensor Tech</a>
+<a class="text-primary-container border-b-2 border-primary-container font-label-caps text-label-caps uppercase tracking-wider pb-1" href="#specs">Specifications</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider transition-colors hover:text-primary duration-150" href="#bundles">Reviews</a>
+</nav>
+<!-- Trailing Cluster -->
+<div class="flex items-center gap-4">
+<button class="hidden lg:inline-flex items-center justify-center font-label-caps text-label-caps uppercase text-on-surface px-4 py-2 rounded-lg border border-outline-variant/60 hover:bg-surface-bright/40 active:scale-[0.98] transition-all duration-150">
+          Configure
+        </button>
+<a class="bg-primary-container text-surface-container-lowest font-label-caps text-label-caps uppercase font-bold px-5 py-2 rounded-lg hover:bg-primary-fixed-dim hover:shadow-[0_0_20px_rgba(5,223,114,0.45)] active:scale-[0.98] transition-all duration-150" href="#bundles">
+          Pre-Order Now
+        </a>
+<button aria-label="Shopping Cart" class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ==================== SUB-NAVIGATION STICKY DOCK ==================== -->
+<aside class="fixed top-16 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 hidden md:block">
+<div class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-12">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[15px] font-semibold tracking-tight text-on-surface">PulseFit Pro</span>
+<span class="text-outline-variant text-[12px]">|</span>
+<span class="font-label-numeric text-[13px] text-tertiary">Series 04 Biometric Edition</span>
+</div>
+<div class="flex items-center gap-7">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-container transition-colors py-3 border-b-2 border-transparent hover:border-primary-container" href="#materials">Craft &amp; Materials</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-container transition-colors py-3 border-b-2 border-transparent hover:border-primary-container" href="#sensors">Sensor Architecture</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-container transition-colors py-3 border-b-2 border-transparent hover:border-primary-container" href="#battery">Battery &amp; Power</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-container transition-colors py-3 border-b-2 border-transparent hover:border-primary-container" href="#specs">Technical Specs</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-container transition-colors py-3 border-b-2 border-transparent hover:border-primary-container" href="#bundles">Pricing &amp; Bundles</a>
+</div>
+</div>
+</aside>
+<!-- ==================== HERO / OVERVIEW SECTION ==================== -->
+<section class="pt-32 md:pt-40 pb-20 overflow-hidden relative" id="overview">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary-container/10 blur-[140px] rounded-full pointer-events-none"></div>
+<div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-secondary-fixed-dim/10 blur-[110px] rounded-full pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high/70 border border-outline-variant/50 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container pulse-ring"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary">Aero-Grade Grade 5 Titanium</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight uppercase leading-none mb-6">
+          Precision In Every Micron.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light max-w-2xl mx-auto">
+          Milled from pure titanium billet with ceramic optical backplate. Engineered for athletes who demand laboratory-grade telemetry under extreme biological loads.
+        </p>
+</div>
+<!-- Main Visual Showcase (Asymmetric Glass Bento) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<!-- Interactive 3D Render Perspective (7 cols) -->
+<div class="lg:col-span-7 glass-surface-1 rounded-xl p-8 md:p-12 relative overflow-hidden group border border-outline-variant/30">
+<div class="flex justify-between items-start mb-8 z-10 relative">
+<div>
+<p class="font-label-caps text-label-caps uppercase text-primary">Chassis Optics</p>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Sculpted Aero Titanium</h2>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-numeric text-[13px] text-on-surface-variant bg-surface-container-lowest/90 px-3 py-1 rounded-full border border-outline-variant/40">
+                1.92" LTPO OLED • 2,000 NITS
+              </span>
+</div>
+</div>
+<div class="relative w-full h-80 md:h-96 flex items-center justify-center">
+<img alt="PulseFit Pro Titanium Chasis Front Elevation" class="w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)] transition-transform duration-700 group-hover:scale-105" data-alt="A macro studio photograph of an ultra-luxury smartwatch crafted from brushed aerospace titanium. The bezel displays a glowing cyberpunk-teal digital heart rate waveform on a pitch-black sapphire display. Deep obsidian background with dramatic, surgical directional rim lighting highlighting precision chamfered edges and micro-machined titanium crown buttons." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1jkmYuRVOUw_otZshG1lqdcJAZ5ZUnGwFNN-qZAIVimFlcPX8ksVQGi21my6xwbcs4IdLMRaDvj78pTN2MfMlKwwiQhmNNF9LONC0Ez57yQ1KZ9kV95FmE67ms8-JUyAZgDOZF9_x_xAzxJ2SYoY5g78dEXP2NmPWpFsrR_zUp5ZyjMzRE-MBvoXbr6i50uz9kw3_5wcdv72sEwpymi-Z7_egCgl-FASi08E7Q7tpnhT6DTk1NfAC8Q"/>
+</div>
+<div class="grid grid-cols-3 gap-4 pt-6 mt-6 border-t border-outline-variant/30 z-10 relative">
+<div>
+<div class="font-label-caps text-label-caps uppercase text-outline">Weight</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface font-label-numeric">38.2g</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Chassis only</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-outline">Bezel Tol.</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-primary font-label-numeric">±0.002mm</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">CNC Milled</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-outline">Hardness</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-tertiary font-label-numeric">9.2 Mohs</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Sapphire Crystal</div>
+</div>
+</div>
+</div>
+<!-- Sticky Rapid Config Pod (5 cols) -->
+<div class="lg:col-span-5 glass-surface-2 rounded-xl p-8 flex flex-col justify-between h-full border border-outline-variant/40">
+<div>
+<div class="flex items-center justify-between pb-6 border-b border-outline-variant/30">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Finish &amp; Case Size</span>
+<span class="font-label-numeric text-[13px] text-primary">IN STOCK • SHIPS 48H</span>
+</div>
+<!-- Size Selector -->
+<div class="my-6">
+<label class="block font-label-caps text-label-caps uppercase text-outline mb-3">Dial Enclosure Scale</label>
+<div class="grid grid-cols-2 gap-3 p-1 bg-surface-container-lowest/80 rounded-lg border border-outline-variant/40">
+<button class="py-2.5 rounded text-center transition-all duration-150 font-label-numeric text-[14px] bg-surface-container-high text-primary-container shadow-sm border border-primary-container/40 font-semibold" type="button">
+                  45mm <span class="text-[12px] text-on-surface-variant ml-1 font-body-sm">(Elite)</span>
+</button>
+<button class="py-2.5 rounded text-center transition-all duration-150 font-label-numeric text-[14px] text-on-surface-variant hover:text-on-surface" type="button">
+                  41mm <span class="text-[12px] text-outline ml-1 font-body-sm">(Slim)</span>
+</button>
+</div>
+</div>
+<!-- Quick Telemetry Overview -->
+<div class="space-y-4 my-6">
+<div class="flex items-center justify-between p-3.5 rounded-lg bg-surface-container-low/70 border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="monitor_heart">monitor_heart</span>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface">Sensor Engine</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">8-Channel TruePPG™ Array</div>
+</div>
+</div>
+<span class="font-label-numeric text-[13px] text-primary font-medium">99.4% Clinical</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-lg bg-surface-container-low/70 border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="battery_charging_full">battery_charging_full</span>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface">Dual Battery Cell</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Silicon-Anode Solid Hybrid</div>
+</div>
+</div>
+<span class="font-label-numeric text-[13px] text-on-surface font-medium">14 Days Run</span>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/30">
+<div class="flex items-baseline justify-between mb-4">
+<div>
+<span class="text-[12px] text-outline block font-body-sm">Pre-Order Price</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-label-numeric">$299</span>
+</div>
+<span class="font-label-numeric text-[13px] text-on-surface-variant">or $24.91/mo for 12 mos</span>
+</div>
+<a class="w-full bg-primary-container text-surface-container-lowest font-label-caps text-label-caps uppercase font-bold py-3.5 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-fixed-dim hover:shadow-[0_0_24px_rgba(5,223,114,0.45)] transition-all duration-150 active:scale-[0.98]" href="#bundles">
+<span>Configure Your Build</span>
+<span class="material-symbols-outlined text-sm font-bold" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== CRAFT & INTERACTIVE VARIANT SHOWCASE ==================== -->
+<section class="py-24 border-t border-outline-variant/30 bg-surface-container-lowest/60 relative" id="materials">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Tailored Finishes</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Craft, Alloy &amp; Material Palette</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-4 md:mt-0">
+          Four hand-finished chassis iterations, coupled with hypoallergenic, marine-grade and ballistic textile strap options.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Interactive Watch Casing Preview -->
+<div class="lg:col-span-8 glass-surface-1 rounded-xl p-8 md:p-14 relative flex flex-col items-center justify-center min-h-[460px] border border-outline-variant/40">
+<div class="absolute top-6 left-6 flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#05df72]"></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider" id="finish-label">Midnight Stealth // Space Anodized</span>
+</div>
+<!-- Central Hardware Mockup Display -->
+<div class="w-72 h-72 md:w-80 md:h-80 relative flex items-center justify-center my-6">
+<img alt="Selected Casing and Strap Variant Preview" class="w-full h-full object-contain filter drop-shadow-[0_24px_50px_rgba(0,0,0,0.95)] transition-all duration-300" data-alt="A close-up high-angle studio shot of the PulseFit Pro smartwatch in deep matte Midnight Stealth black with an architectural black fluoroelastomer sport strap. Ambient cyan reflections skim over the anti-reflective crystal bezel. Pristine hyper-realistic product imagery against a textured volcanic dark stone background." id="variant-display-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ3oeG_MuFKWObElktrazfGFV1s1mKcKnnnsEiJqAEHDowDmDAha0Dy9PT5QXWASmE-9B8fuiQhsyqO4Wp2gFuUqfIrPHP5UGlf7J0Xq1MDVVk1vsRQIlQo82gunsdAWpxyydRGyNWateS336IGdVbwSUs4AVE14R_hiZo6zIftaXjQmjXnHTHRXzsXIVNRhxn3YkvqmVnslsZqCi_FcJlmH1nVA-MZOmVToc8QgBz4QYwfZRjlC4K6g"/>
+</div>
+<div class="w-full flex justify-between items-center text-outline text-[12px] border-t border-outline-variant/30 pt-4 mt-4">
+<span class="font-label-numeric">Case: Physical Vapor Deposition (PVD)</span>
+<span class="font-label-numeric">Strap: 316L Stainless Steel Lug</span>
+</div>
+</div>
+<!-- Customizer Switchers Column -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Casing Finish Selector -->
+<div class="glass-surface-2 p-6 rounded-xl border border-outline-variant/40">
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface mb-4">1. Case Finish</h3>
+<div class="grid grid-cols-2 gap-3" id="case-swatches">
+<!-- Swatch 1: Midnight Stealth -->
+<button class="p-3 rounded-lg border-2 border-primary-container bg-surface-container-high/80 flex items-center gap-3 text-left transition-all" onclick="setCaseFinish('Midnight Stealth', '#0f131c', this)">
+<span class="w-6 h-6 rounded-full bg-[#0a0e16] border border-outline-variant inline-block shadow-inner"></span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Midnight</div>
+<div class="text-[11px] text-outline font-label-caps">Stealth DLC</div>
+</div>
+</button>
+<!-- Swatch 2: Titanium Silver -->
+<button class="p-3 rounded-lg border border-outline-variant/30 bg-surface-container-high/40 flex items-center gap-3 text-left transition-all hover:border-outline" onclick="setCaseFinish('Titanium Silver', '#859585', this)">
+<span class="w-6 h-6 rounded-full bg-[#859585] border border-white/20 inline-block shadow-inner"></span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Silver</div>
+<div class="text-[11px] text-outline font-label-caps">Natural Ti</div>
+</div>
+</button>
+<!-- Swatch 3: Alpine Sage -->
+<button class="p-3 rounded-lg border border-outline-variant/30 bg-surface-container-high/40 flex items-center gap-3 text-left transition-all hover:border-outline" onclick="setCaseFinish('Alpine Sage', '#3c4a3d', this)">
+<span class="w-6 h-6 rounded-full bg-[#263529] border border-primary/50 inline-block shadow-inner"></span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Alpine Sage</div>
+<div class="text-[11px] text-outline font-label-caps">Matte Green</div>
+</div>
+</button>
+<!-- Swatch 4: Cyber Teal -->
+<button class="p-3 rounded-lg border border-outline-variant/30 bg-surface-container-high/40 flex items-center gap-3 text-left transition-all hover:border-outline" onclick="setCaseFinish('Cyber Mint', '#05df72', this)">
+<span class="w-6 h-6 rounded-full bg-[#05df72] border border-primary-fixed inline-block shadow-inner shadow-[0_0_8px_#05df72]"></span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Cyber Mint</div>
+<div class="text-[11px] text-outline font-label-caps">Neon Electric</div>
+</div>
+</button>
+</div>
+</div>
+<!-- Interchangeable Strap Selector -->
+<div class="glass-surface-2 p-6 rounded-xl border border-outline-variant/40">
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface mb-4">2. Strap Architecture</h3>
+<div class="space-y-2.5" id="strap-swatches">
+<button class="w-full p-3 rounded-lg border-2 border-primary-container bg-surface-container-high/80 flex items-center justify-between text-left transition-all" onclick="setStrap('Fluoroelastomer Sport Band', this)">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="water_drop">water_drop</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Fluoroelastomer Sport</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Compression molded, sweat-wicking channels</div>
+</div>
+</div>
+<span class="font-label-numeric text-[12px] text-primary font-semibold">Included</span>
+</button>
+<button class="w-full p-3 rounded-lg border border-outline-variant/30 bg-surface-container-high/40 flex items-center justify-between text-left transition-all hover:border-outline" onclick="setStrap('Milanese Loop Titanium', this)">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="grid_4x4">grid_4x4</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Milanese Loop Mesh</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Woven stainless magnetic clasp</div>
+</div>
+</div>
+<span class="font-label-numeric text-[12px] text-on-surface-variant">+$49</span>
+</button>
+<button class="w-full p-3 rounded-lg border border-outline-variant/30 bg-surface-container-high/40 flex items-center justify-between text-left transition-all hover:border-outline" onclick="setStrap('Braided Trail Loop', this)">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="texture">texture</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Braided Trail Loop</div>
+<div class="text-[12px] text-on-surface-variant font-body-sm">Elastic textile with titanium pull tab</div>
+</div>
+</div>
+<span class="font-label-numeric text-[12px] text-on-surface-variant">+$29</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SENSOR ARCHITECTURE SECTION ==================== -->
+<section class="py-24 relative overflow-hidden" id="sensors">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Photonic Subsystem</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Deep Dive Sensor Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          An unprecedented array of clinical telemetry sensors embedded into a convex zirconia sapphire back-crystal, sampling vital biosignals at up to 1,000Hz.
+        </p>
+</div>
+<!-- Sensor Visual Exploded Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Sensor 1: Photodiode Array -->
+<div class="glass-surface-1 rounded-xl p-6 flex flex-col justify-between hover:border-primary-container transition-all duration-300 group border border-outline-variant/30">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 rounded-lg bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined" data-icon="lens_blur">lens_blur</span>
+</span>
+<span class="font-label-numeric text-[12px] text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20">ACTIVE 1000Hz</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">8-Photodiode Array</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Symmetrical dual-spectrum red, green, and infrared optical sensors penetrate dermal tissue to track SpO2 and continuous HRV with zero phase lag.
+            </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30">
+<div class="flex justify-between items-center font-label-numeric text-[13px]">
+<span class="text-outline">Wavelength Precision</span>
+<span class="text-primary-container font-semibold">525nm - 940nm</span>
+</div>
+</div>
+</div>
+<!-- Sensor 2: Skin Temp Sensor -->
+<div class="glass-surface-1 rounded-xl p-6 flex flex-col justify-between hover:border-secondary-fixed-dim transition-all duration-300 group border border-outline-variant/30">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 rounded-lg bg-surface-container-high text-secondary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="device_thermostat">device_thermostat</span>
+</span>
+<span class="font-label-numeric text-[12px] text-on-surface-variant bg-surface-container-high px-2.5 py-0.5 rounded-full border border-outline-variant/30">DUAL NTC</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Skin Temperature</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Twin differential thermistors gauge baseline core body fluctuations and overnight recovery cycles, sampling surface heat every 5 seconds.
+            </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30">
+<div class="flex justify-between items-center font-label-numeric text-[13px]">
+<span class="text-outline">Thermal Sensitivity</span>
+<span class="text-secondary-fixed-dim font-semibold">±0.01°C</span>
+</div>
+</div>
+</div>
+<!-- Sensor 3: ECG Electrodes -->
+<div class="glass-surface-1 rounded-xl p-6 flex flex-col justify-between hover:border-error transition-all duration-300 group border border-outline-variant/30">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 rounded-lg bg-surface-container-high text-error">
+<span class="material-symbols-outlined" data-icon="ecg_heart">ecg_heart</span>
+</span>
+<span class="font-label-numeric text-[12px] text-error bg-error-container/30 px-2.5 py-0.5 rounded-full border border-error/30">FDA CLEARED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Single-Lead ECG</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Titanium bezel and back-crystal titanium electrodes deliver a clinical-grade single-lead electrocardiogram in 30 seconds for sinus rhythm verification.
+            </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30">
+<div class="flex justify-between items-center font-label-numeric text-[13px]">
+<span class="text-outline">Electrical Sampling</span>
+<span class="text-on-surface font-semibold">512 Samples/Sec</span>
+</div>
+</div>
+</div>
+<!-- Sensor 4: Ambient Light & Barometric -->
+<div class="glass-surface-1 rounded-xl p-6 flex flex-col justify-between hover:border-tertiary transition-all duration-300 group border border-outline-variant/30">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 rounded-lg bg-surface-container-high text-primary-fixed">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+</span>
+<span class="font-label-numeric text-[12px] text-on-surface-variant bg-surface-container-high px-2.5 py-0.5 rounded-full border border-outline-variant/30">RGB MATRIX</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ambient &amp; Barometer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Continuous adaptive display modulation matched to ultraviolet and lux variations, paired with a high-accuracy altimetric pressure transducer.
+            </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30">
+<div class="flex justify-between items-center font-label-numeric text-[13px]">
+<span class="text-outline">Altimeter Floor Res</span>
+<span class="text-primary-fixed font-semibold">10cm Elevation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Biomarker Readout Pod Banner -->
+<div class="mt-8 glass-surface-2 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-outline-variant/40">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-outline-variant/50">
+<span class="material-symbols-outlined text-primary-container" data-icon="vital_signs">vital_signs</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Neural Biometric Co-Processor</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Edge ML model processes 4.2 million biometric points every 24 hours locally on wrist.</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<div class="font-label-numeric text-[22px] font-bold text-primary">99.8%</div>
+<div class="text-[12px] text-outline font-body-sm">Anomaly Detection Accuracy</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<div class="text-right">
+<div class="font-label-numeric text-[22px] font-bold text-secondary-fixed-dim">&lt; 8ms</div>
+<div class="text-[12px] text-outline font-body-sm">Sensor-to-Display Latency</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== BATTERY & POWER ARCHITECTURE ==================== -->
+<section class="py-24 border-t border-outline-variant/30 bg-surface-container-lowest/50 relative" id="battery">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Power Battery Cell Representation -->
+<div class="lg:col-span-5 relative">
+<div class="glass-surface-1 rounded-xl p-8 border border-outline-variant/40 relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<span class="font-label-caps text-label-caps uppercase text-outline">Energy Cell Subsystem</span>
+<span class="font-label-numeric text-[13px] text-primary">Solid-State Hybrid</span>
+</div>
+<!-- Battery Graphic Simulation -->
+<div class="my-8 flex flex-col items-center">
+<div class="w-48 h-24 rounded-xl border-2 border-primary-container/70 p-2 flex items-center gap-2 relative bg-surface-container-lowest">
+<div class="h-full bg-gradient-to-r from-primary to-secondary-fixed-dim rounded-lg w-[85%] shadow-[0_0_24px_rgba(5,223,114,0.5)]"></div>
+<div class="absolute -right-3 top-1/2 -translate-y-1/2 w-2 h-8 bg-primary-container rounded-r"></div>
+</div>
+<div class="mt-6 text-center">
+<span class="font-metric-xl text-metric-xl font-bold text-on-surface font-label-numeric leading-none">14</span>
+<span class="font-headline-md text-headline-md text-primary ml-1">Days</span>
+<p class="text-[12px] text-on-surface-variant mt-1 font-body-sm">Full 24/7 continuous health tracking</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-6 border-t border-outline-variant/30 font-label-numeric">
+<div>
+<span class="text-[12px] text-outline block font-body-sm">Quick Fast-Charge</span>
+<span class="text-headline-sm font-semibold text-on-surface">0-80% in 35m</span>
+</div>
+<div>
+<span class="text-[12px] text-outline block font-body-sm">Extreme GPS Mode</span>
+<span class="text-headline-sm font-semibold text-primary">65 Hours</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Copy and Deep Specs on Power Management -->
+<div class="lg:col-span-7">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Unbounded Endurance</span>
+<h2 class="font-display-hero text-headline-lg md:text-[44px] text-on-surface leading-tight mb-6">
+            Two Weeks Away From Any Power Outlet.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+            PulseFit Pro replaces conventional lithium-ion with a proprietary silicon-anode density cell. Coupled with our ultra-efficient dynamic LTPO display controller that scales seamlessly from 1Hz during sleep to 60Hz during active workout sprints.
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-5 rounded-lg bg-surface-container-high/50 border border-outline-variant/30">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined" data-icon="electric_bolt">electric_bolt</span>
+<h4 class="font-headline-sm text-[17px] font-semibold text-on-surface">Dynamic Refresh Throttle</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Drops to a microscopic 1 frame per second when your arm is stationary, saving up to 48% idle current.
+              </p>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-high/50 border border-outline-variant/30">
+<div class="flex items-center gap-3 mb-2 text-tertiary">
+<span class="material-symbols-outlined" data-icon="nest_eco_leaf">nest_eco_leaf</span>
+<h4 class="font-headline-sm text-[17px] font-semibold text-on-surface">Magnetic Induction Dock</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Braided USB-C fast-charger delivers an entire weekend of biometric telemetry in just 12 minutes of charge time.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== COMPREHENSIVE SPEC MATRIX ==================== -->
+<section class="py-24 relative" id="specs">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Spec Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Full Technical Specifications</h2>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-3">
+<span class="text-[12px] text-on-surface-variant font-body-sm">Comparing:</span>
+<span class="font-label-numeric text-[13px] bg-surface-container-high px-3 py-1 rounded text-primary border border-outline-variant/40">PulseFit Pro 45mm vs 41mm</span>
+</div>
+</div>
+<!-- Tabular Technical Specs -->
+<div class="glass-surface-1 rounded-xl overflow-hidden border border-outline-variant/40 shadow-2xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/40 bg-surface-container-lowest">
+<th class="py-5 px-6 font-label-caps text-label-caps uppercase text-outline">Category / Module</th>
+<th class="py-5 px-6 font-label-caps text-label-caps uppercase text-primary-container">PulseFit Pro 45mm (Elite)</th>
+<th class="py-5 px-6 font-label-caps text-label-caps uppercase text-on-surface">PulseFit Pro 41mm (Slim)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<!-- Row 1: Dimensions -->
+<tr class="hover:bg-surface-bright/20 transition-colors">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="straighten">straighten</span>
+                  Dimensions &amp; Case
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface">45.2 × 39.0 × 10.4 mm</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">41.0 × 35.4 × 9.9 mm</td>
+</tr>
+<!-- Row 2: Weight -->
+<tr class="hover:bg-surface-bright/20 transition-colors bg-white/[0.01]">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="scale">scale</span>
+                  Chassis Weight
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-primary font-semibold">38.2 grams</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">32.1 grams</td>
+</tr>
+<!-- Row 3: Display -->
+<tr class="hover:bg-surface-bright/20 transition-colors">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="smartphone">smartphone</span>
+                  Display Optics
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface">
+                  1.92" LTPO Always-On OLED<br/>
+<span class="text-[12px] text-primary font-body-sm">2,000 nits peak • 396×484 px</span>
+</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">
+                  1.71" LTPO Always-On OLED<br/>
+<span class="text-[12px] text-outline font-body-sm">2,000 nits peak • 352×430 px</span>
+</td>
+</tr>
+<!-- Row 4: Materials -->
+<tr class="hover:bg-surface-bright/20 transition-colors bg-white/[0.01]">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="shield">shield</span>
+                  Materials &amp; Glass
+                </td>
+<td class="py-4 px-6 font-body-sm text-on-surface">Grade 5 Aerospace Titanium + Sapphire Crystal Front</td>
+<td class="py-4 px-6 font-body-sm text-on-surface-variant">Grade 5 Aerospace Titanium + Sapphire Crystal Front</td>
+</tr>
+<!-- Row 5: Battery Life -->
+<tr class="hover:bg-surface-bright/20 transition-colors">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="battery_full">battery_full</span>
+                  Battery &amp; Autonomy
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-primary font-medium">
+                  Up to 14 days normal use<br/>
+<span class="text-[12px] text-on-surface-variant font-body-sm">65 hours multi-band GPS</span>
+</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">
+                  Up to 10 days normal use<br/>
+<span class="text-[12px] text-outline font-body-sm">48 hours multi-band GPS</span>
+</td>
+</tr>
+<!-- Row 6: Water & Ingress -->
+<tr class="hover:bg-surface-bright/20 transition-colors bg-white/[0.01]">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="scuba_diving">scuba_diving</span>
+                  Ingress &amp; Immersion
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface">5ATM (50 meters) + IP68 dust/water tight</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">5ATM (50 meters) + IP68 dust/water tight</td>
+</tr>
+<!-- Row 7: Connectivity -->
+<tr class="hover:bg-surface-bright/20 transition-colors">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="wifi_tethering">wifi_tethering</span>
+                  Radios &amp; Telemetry
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface">
+                  Bluetooth 5.3 LE, Dual-Band Wi-Fi 6 (802.11ax), NFC Contactless Payments, Dual-Frequency GNSS (L1+L5)
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">
+                  Bluetooth 5.3 LE, Dual-Band Wi-Fi 6 (802.11ax), NFC Contactless Payments, Dual-Frequency GNSS (L1+L5)
+                </td>
+</tr>
+<!-- Row 8: Onboard Storage -->
+<tr class="hover:bg-surface-bright/20 transition-colors bg-white/[0.01]">
+<td class="py-4 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base" data-icon="memory">memory</span>
+                  Flash Storage
+                </td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface">32GB (Offline Maps &amp; Audio)</td>
+<td class="py-4 px-6 font-label-numeric text-[14px] text-on-surface-variant">32GB (Offline Maps &amp; Audio)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== PRICING TIERS & BUNDLES ==================== -->
+<section class="py-24 border-t border-outline-variant/30 bg-surface-container-lowest/80 relative" id="bundles">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Direct Order Allocation</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Select Your Hardware Configuration</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Includes free express global shipping, lifetime access to PulseFit Biometric Cloud, and 2-year pro accidental hardware warranty.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- Tier 1: Solo Pack -->
+<div class="glass-surface-1 rounded-xl p-8 flex flex-col justify-between border border-outline-variant/40 hover:border-outline transition-all duration-200">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-outline">Entry Telemetry</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Solo Pack</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">
+              Complete standalone wrist telemetry system for performance training and sleep optimization.
+            </p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-metric-xl text-[40px] font-bold text-on-surface font-label-numeric">$299</span>
+<span class="font-body-sm text-on-surface-variant font-label-numeric">USD</span>
+</div>
+<ul class="space-y-3 pt-6 border-t border-outline-variant/30 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>PulseFit Pro 41mm or 45mm Watch</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>1× Fluoroelastomer Sport Band</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>Magnetic Fast Induction Dock</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>Lifetime Cloud Metrics License</span>
+</li>
+</ul>
+</div>
+<a class="mt-8 w-full py-3 rounded-lg border border-outline-variant/60 font-label-caps text-label-caps uppercase text-on-surface text-center hover:bg-surface-bright/40 active:scale-[0.98] transition-all" href="#">
+            Select Solo Pack
+          </a>
+</div>
+<!-- Tier 2: Athlete Bundle (Featured High-Priority) -->
+<div class="glass-surface-2 rounded-xl p-8 flex flex-col justify-between border-2 border-primary-container relative neon-glow-green">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-container text-surface-container-lowest font-label-caps text-[11px] font-bold uppercase tracking-wider py-1 px-3.5 rounded-full shadow-lg">
+            Most Selected by Athletes
+          </div>
+<div>
+<div class="flex justify-between items-center mb-4 mt-2">
+<span class="font-label-caps text-label-caps uppercase text-primary">Complete Biometric Rig</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Athlete Bundle</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">
+              Wrist watch combined with our Dual-ECG chest strap and swappable performance straps for triathlon and marathon training.
+            </p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-metric-xl text-[40px] font-bold text-on-surface font-label-numeric">$349</span>
+<span class="font-body-sm text-on-surface-variant font-label-numeric">USD</span>
+<span class="ml-2 font-label-numeric text-[12px] text-primary bg-primary/10 border border-primary/30 px-2 py-0.5 rounded font-semibold">SAVE $69</span>
+</div>
+<ul class="space-y-3 pt-6 border-t border-outline-variant/30 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span class="font-semibold text-primary">PulseFit Pro (Choice of 41/45mm)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>2× Bands (Sport Band + Trail Loop)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span class="text-tertiary font-medium">PulseFit Pro Chest Strap 1,000Hz ECG</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>Dual Travel Fast Induction Pouch</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>Telemetry Coach Pro 12-Month Access</span>
+</li>
+</ul>
+</div>
+<a class="mt-8 w-full py-3.5 rounded-lg bg-primary-container text-surface-container-lowest font-label-caps text-label-caps uppercase font-bold text-center hover:bg-primary-fixed-dim hover:shadow-[0_0_24px_rgba(5,223,114,0.5)] active:scale-[0.98] transition-all" href="#">
+            Pre-Order Athlete Bundle
+          </a>
+</div>
+<!-- Tier 3: Duo Pack -->
+<div class="glass-surface-1 rounded-xl p-8 flex flex-col justify-between border border-outline-variant/40 hover:border-outline transition-all duration-200">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-outline">Team &amp; Partnership</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Duo Pack</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-6">
+              Two complete PulseFit Pro units with customizable finishes, ideal for coaching pairs or partner athletic training.
+            </p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-metric-xl text-[40px] font-bold text-on-surface font-label-numeric">$549</span>
+<span class="font-body-sm text-on-surface-variant font-label-numeric">USD</span>
+<span class="ml-2 font-label-numeric text-[12px] text-primary bg-primary/10 border border-primary/30 px-2 py-0.5 rounded font-semibold">SAVE $49</span>
+</div>
+<ul class="space-y-3 pt-6 border-t border-outline-variant/30 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>2× PulseFit Pro Watches (Any Size/Color)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>4× Interchangeable Straps Included</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>2× Fast Induction Docks</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm font-semibold" data-icon="check_circle">check_circle</span>
+<span>Sync Shared Training Cloud Hub</span>
+</li>
+</ul>
+</div>
+<a class="mt-8 w-full py-3 rounded-lg border border-outline-variant/60 font-label-caps text-label-caps uppercase text-on-surface text-center hover:bg-surface-bright/40 active:scale-[0.98] transition-all" href="#">
+            Select Duo Pack
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== MOBILE CONVERSION DOCK (STICKY BOTTOM) ==================== -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/40 px-6 py-3 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-outline uppercase block">PulseFit Pro</span>
+<span class="font-label-numeric text-headline-sm font-bold text-on-surface">$299</span>
+</div>
+<a class="bg-primary-container text-surface-container-lowest font-label-caps text-label-caps uppercase font-bold px-6 py-2.5 rounded-lg active:scale-95 transition-transform shadow-[0_0_16px_rgba(5,223,114,0.4)]" href="#bundles">
+      Pre-Order Now
+    </a>
+</div>
+<!-- ==================== SHARED COMPONENT: Footer ==================== -->
+<footer class="full-width bg-surface-container-lowest border-t border-outline-variant/40">
+<div class="w-full max-w-7xl mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PulseFit Pro</span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2025 PulseFit Pro Biometrics Inc. All rights reserved. Precision engineered for elite performance.
+        </p>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Biometric Compliance</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Telemetry API</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Support</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm transition-colors hover:text-primary-container duration-150 active:opacity-80" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- Interactive JavaScript for Variant Selector Micro-Interactions -->
+<script>
+    let currentFinish = "Midnight Stealth";
+    let currentStrap = "Fluoroelastomer Sport Band";
+
+    function updateLabel() {
+      const labelEl = document.getElementById("finish-label");
+      if (labelEl) {
+        labelEl.textContent = `${currentFinish} // ${currentStrap}`;
+      }
+    }
+
+    function setCaseFinish(finishName, colorHex, btnElement) {
+      currentFinish = finishName;
+      updateLabel();
+
+      // Reset swatch borders
+      const buttons = document.querySelectorAll("#case-swatches button");
+      buttons.forEach(btn => {
+        btn.classList.remove("border-2", "border-primary-container", "bg-surface-container-high/80");
+        btn.classList.add("border", "border-outline-variant/30", "bg-surface-container-high/40");
+      });
+
+      // Highlight active
+      btnElement.classList.add("border-2", "border-primary-container", "bg-surface-container-high/80");
+      btnElement.classList.remove("border-outline-variant/30", "bg-surface-container-high/40");
+    }
+
+    function setStrap(strapName, btnElement) {
+      currentStrap = strapName;
+      updateLabel();
+
+      // Reset strap borders
+      const buttons = document.querySelectorAll("#strap-swatches button");
+      buttons.forEach(btn => {
+        btn.classList.remove("border-2", "border-primary-container", "bg-surface-container-high/80");
+        btn.classList.add("border", "border-outline-variant/30", "bg-surface-container-high/40");
+      });
+
+      // Highlight active
+      btnElement.classList.add("border-2", "border-primary-container", "bg-surface-container-high/80");
+      btnElement.classList.remove("border-outline-variant/30", "bg-surface-container-high/40");
+    }
+  </script>
+</body></html>

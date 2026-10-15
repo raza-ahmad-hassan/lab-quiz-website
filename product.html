@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFit Pro - Technical Specifications & Customizer</title>
+  <meta name="description" content="Explore detailed technical specifications, custom finish variants, and sensor architecture for the PulseFit Pro Smart Fitness Watch.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div style="background: linear-gradient(90deg, #064E3B, #10B981, #064E3B); color: #080C14; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1rem; text-align: center;">
+    🚀 Launch Exclusive: Get $50 off with code <strong style="text-decoration: underline;">LAUNCH50</strong> at checkout • Free Global Priority Shipping
+  </div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PulseFit Pro Home">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <span>PulseFit<span class="text-mint">Pro</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link active">Product Specs</a>
+        <a href="order.html" class="nav-link">Order Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="order.html" class="cart-link-btn" aria-label="View Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+          <span class="cart-counter">1</span>
+        </a>
+        <a href="order.html" class="btn btn-primary btn-sm">Buy Now</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="product.html" class="nav-link active">Product Specs & Features</a>
+      <a href="order.html" class="nav-link">Order & Checkout</a>
+    </div>
+  </header>
+
+  <!-- Main Product Customizer & Specs Content -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Product Hero Customizer Section -->
+      <div class="product-detail-grid">
+        
+        <!-- Left: Gallery & Visual Asset Stage -->
+        <div class="product-gallery-sticky">
+          <div class="product-main-stage">
+            <span class="badge-tag" style="position: absolute; top: 1.5rem; left: 1.5rem;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              Top Rated 4.9/5
+            </span>
+
+            <!-- Dynamic Picture Asset Stage (Auto-discovers customer images across assets/ and root) -->
+            <img id="main-product-img" 
+                 src="assets/product-watch.svg" 
+                 alt="PulseFit Pro Flagship Smart Fitness Watch" 
+                 class="product-gallery-img"
+                 onerror="this.src='assets/product.png'; this.onerror=function(){ this.src='assets/product.jpg'; this.onerror=function(){ this.src='assets/hero.png'; this.onerror=function(){ this.src='assets/watch.png'; this.onerror=function(){ this.src='product.png'; this.onerror=function(){ this.src='product.jpg'; this.onerror=function(){ this.src='watch.png'; this.onerror=function(){ this.src='watch.jpg'; this.onerror=function(){ this.src='hero.png'; this.onerror=function(){ this.style.display='none'; document.getElementById('product-vector-fallback').style.display='flex'; } } } } } } } } };">
+
+            <!-- High-Fidelity Vector Watch Fallback -->
+            <div id="product-vector-fallback" class="watch-device-frame" style="display: none; transform: scale(0.95);">
+              <div class="watch-strap" id="product-vector-strap"></div>
+              <div class="watch-case" id="product-vector-case">
+                <div class="watch-crown"></div>
+                <div class="watch-side-button"></div>
+                <div class="watch-screen">
+                  <div class="watch-screen-header">
+                    <span>PULSEFIT PRO</span>
+                    <span style="color: var(--color-mint-400);">100% ⚡</span>
+                  </div>
+                  <div class="watch-time">10:42</div>
+                  <div class="watch-metric-ring">
+                    <div class="metric-circle">
+                      <svg><circle class="bg-ring" cx="35" cy="35" r="28"></circle><circle class="val-ring" cx="35" cy="35" r="28"></circle></svg>
+                      <div class="metric-circle-inner">98<span>% SPO2</span></div>
+                    </div>
+                  </div>
+                  <div class="watch-ecg-line">
+                    <svg viewBox="0 0 200 40"><path d="M0,20 L40,20 L50,8 L60,32 L70,14 L80,25 L90,20 L200,20"></path></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="watch-strap watch-strap-bottom" id="product-vector-strap-bottom"></div>
+            </div>
+          </div>
+
+          <!-- Thumbnail Perspective Switcher -->
+          <div class="thumbnail-row">
+            <button class="thumbnail-pill active" onclick="switchProductView('front')" aria-label="Front View">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line></svg>
+            </button>
+            <button class="thumbnail-pill" onclick="switchProductView('side')" aria-label="Side Profile View">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="9" y="4" width="6" height="16" rx="3"></rect><path d="M15 9h2v6h-2"></path></svg>
+            </button>
+            <button class="thumbnail-pill" onclick="switchProductView('sensors')" aria-label="Sensors Back View">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+            </button>
+            <button class="thumbnail-pill" onclick="switchProductView('box')" aria-label="In-The-Box Unboxing View">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Technical Details & Interactive Configurator -->
+        <div class="product-info-column">
+          <div class="badge-tag">Flagship Series 2026</div>
+          <h1 class="section-title" style="font-size: 2.75rem; text-align: left; margin-bottom: 0.5rem;">
+            PulseFit <span class="text-mint">Pro</span>
+          </h1>
+          <p style="font-size: 1.1rem; color: var(--color-slate-400); margin-bottom: 1.5rem;">
+            Grade-5 Aerospace Titanium chassis with real-time continuous ECG, bio-impedance composition, and sapphire crystal AMOLED display.
+          </p>
+
+          <!-- Price & Stock Badge -->
+          <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem;">
+            <span id="product-price-display" style="font-size: 2.5rem; font-weight: 900; color: var(--color-white); font-family: var(--font-mono);">$299.00</span>
+            <span style="font-size: 1.3rem; color: var(--color-slate-500); text-decoration: line-through; font-family: var(--font-mono);">$349.00</span>
+            <span style="padding: 0.25rem 0.6rem; background: rgba(16, 185, 129, 0.2); color: var(--color-mint-400); font-weight: 700; border-radius: var(--radius-sm); font-size: 0.8rem;">SAVE $50</span>
+          </div>
+
+          <!-- Color Finish Customizer -->
+          <div class="customizer-box">
+            <div class="customizer-title">
+              <span>Chassis Finish</span>
+              <span id="selected-finish-name">Midnight Slate</span>
+            </div>
+            <div class="finish-swatches">
+              <div class="finish-swatch-item active" onclick="selectFinish('Midnight Slate', '#111827', '#1E293B')">
+                <div class="finish-circle" style="border-color: var(--color-mint-400);">
+                  <div class="finish-circle-inner" style="background: #111827; border: 1px solid #374151;"></div>
+                </div>
+                <span class="finish-label">Midnight Slate</span>
+              </div>
+
+              <div class="finish-swatch-item" onclick="selectFinish('Mint Emerald', '#064E3B', '#047857')">
+                <div class="finish-circle">
+                  <div class="finish-circle-inner" style="background: linear-gradient(135deg, #064E3B, #10B981);"></div>
+                </div>
+                <span class="finish-label">Mint Emerald</span>
+              </div>
+
+              <div class="finish-swatch-item" onclick="selectFinish('Titanium Silver', '#64748B', '#94A3B8')">
+                <div class="finish-circle">
+                  <div class="finish-circle-inner" style="background: linear-gradient(135deg, #94A3B8, #E2E8F0);"></div>
+                </div>
+                <span class="finish-label">Titanium Silver</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strap Selection -->
+          <div class="customizer-box">
+            <div class="customizer-title">
+              <span>Performance Strap</span>
+              <span id="selected-strap-name">Fluoroelastomer Sport (+ $0)</span>
+            </div>
+            <div class="strap-options">
+              <div class="strap-pill active" onclick="selectStrap('Fluoroelastomer Sport', 0)">
+                <div class="strap-name">Sport Active</div>
+                <div class="strap-price">Included ($0)</div>
+              </div>
+              <div class="strap-pill" onclick="selectStrap('Milanese Steel Mesh', 30)">
+                <div class="strap-name">Milanese Mesh</div>
+                <div class="strap-price">+ $30</div>
+              </div>
+              <div class="strap-pill" onclick="selectStrap('Alpine Rugged Weave', 20)">
+                <div class="strap-name">Alpine Weave</div>
+                <div class="strap-price">+ $20</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Highlight Specs -->
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2.5rem;">
+            <div style="background: rgba(31, 41, 55, 0.4); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
+              <div style="font-size: 0.75rem; color: var(--color-slate-400); text-transform: uppercase;">Battery Life</div>
+              <div style="font-weight: 800; color: var(--color-white); font-size: 1.1rem; margin-top: 0.2rem;">Up to 7 Days (Continuous)</div>
+            </div>
+            <div style="background: rgba(31, 41, 55, 0.4); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
+              <div style="font-size: 0.75rem; color: var(--color-slate-400); text-transform: uppercase;">Water Resistance</div>
+              <div style="font-weight: 800; color: var(--color-white); font-size: 1.1rem; margin-top: 0.2rem;">50m (5 ATM) Swimproof</div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-lg" style="flex: 1;" onclick="handleAddToCartAndCheckout()">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+              Order Now — Free Delivery
+            </button>
+            <a href="index.html" class="btn btn-secondary btn-lg">Back to Overview</a>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1.5rem; font-size: 0.85rem; color: var(--color-slate-400);">
+            <span>🛡️ 2-Year Full Manufacturer Warranty</span>
+            <span>⚡ In Stock — Ships in 24 Hours</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comprehensive Technical Specs Grid -->
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="section-title-wrap">
+          <div class="badge-tag">Engineering Blueprints</div>
+          <h2 class="section-title">Full Technical <span class="text-mint">Specifications</span></h2>
+          <p class="section-subtitle">Benchmarked against Apple Watch Ultra and Fitbit Charge to deliver unmatched longevity and sensor precision.</p>
+        </div>
+
+        <div class="specs-table-wrapper">
+          <div class="specs-category-title">Physical Architecture & Display</div>
+          <div class="specs-grid">
+            <div class="spec-row">
+              <div class="spec-cell-label">Display</div>
+              <div class="spec-cell-value">1.43-inch Ultra AMOLED, 466 x 466 pixels, 326 PPI, Always-On Display with 1,200 nits peak brightness</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Cover Glass</div>
+              <div class="spec-cell-value">Double-domed Sapphire Crystal with oleophobic anti-fingerprint coating</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Case Materials</div>
+              <div class="spec-cell-value">Grade-5 Aerospace Titanium frame, ceramic bio-sensor rear case, sapphire window</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Dimensions & Weight</div>
+              <div class="spec-cell-value">46.5mm x 46.5mm x 10.9mm | 48.5 grams (without strap)</div>
+            </div>
+          </div>
+
+          <div class="specs-category-title">Biometric Sensors & Health Telemetry</div>
+          <div class="specs-grid">
+            <div class="spec-row">
+              <div class="spec-cell-label">Heart & Electrical Sensors</div>
+              <div class="spec-cell-value">Clinical-grade 1-Lead ECG electrode sensor, 8-channel photoplethysmography (PPG) optical sensor</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Oxygen & Temperature</div>
+              <div class="spec-cell-value">Infrared + Red LED SpO2 pulse oximeter, continuous skin temperature micro-thermistor (+/- 0.05°C)</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Motion & Environment</div>
+              <div class="spec-cell-value">6-axis high precision IMU (accelerometer + gyroscope), 3-axis electronic compass, barometric altimeter, ambient light sensor</div>
+            </div>
+          </div>
+
+          <div class="specs-category-title">Power, Connectivity & Battery Life</div>
+          <div class="specs-grid">
+            <div class="spec-row">
+              <div class="spec-cell-label">Battery Capacity</div>
+              <div class="spec-cell-value">420 mAh high-density Lithium-Polymer cell</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Typical Battery Life</div>
+              <div class="spec-cell-value">Up to 7 full days under normal continuous 24/7 monitoring; up to 14 days in Power Save Mode</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Fast Magnetic Charging</div>
+              <div class="spec-cell-value">0% to 80% charge in 38 minutes via included USB-C magnetic fast charger</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-cell-label">Wireless Connectivity</div>
+              <div class="spec-cell-value">Dual-Band GPS (L1 + L5), Bluetooth 5.3 Low Energy, NFC for contactless payments, Wi-Fi 802.11 b/g/n (2.4GHz)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- In The Box Breakdown -->
+      <section class="section" style="padding-top: 2rem;">
+        <div class="section-title-wrap">
+          <div class="badge-tag">Unboxing Experience</div>
+          <h2 class="section-title">What's In <span class="text-mint">The Box</span></h2>
+          <p class="section-subtitle">Everything you need for immediate setup and uncompromised performance right out of the box.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center;">
+          <div class="feature-card" style="padding: 2rem 1.5rem;">
+            <div class="feature-icon-box" style="margin: 0 auto 1.25rem auto;">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; color: var(--color-white); margin-bottom: 0.5rem;">PulseFit Pro</h3>
+            <p style="font-size: 0.85rem; color: var(--color-slate-400);">Aerospace titanium smartwatch chassis with chosen finish.</p>
+          </div>
+
+          <div class="feature-card" style="padding: 2rem 1.5rem;">
+            <div class="feature-icon-box" style="margin: 0 auto 1.25rem auto;">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; color: var(--color-white); margin-bottom: 0.5rem;">Configured Strap</h3>
+            <p style="font-size: 0.85rem; color: var(--color-slate-400);">Selected performance band (S/M and M/L sizes included).</p>
+          </div>
+
+          <div class="feature-card" style="padding: 2rem 1.5rem;">
+            <div class="feature-icon-box" style="margin: 0 auto 1.25rem auto;">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; color: var(--color-white); margin-bottom: 0.5rem;">USB-C Fast Cable</h3>
+            <p style="font-size: 0.85rem; color: var(--color-slate-400);">1.2m braided magnetic wireless fast charging cable.</p>
+          </div>
+
+          <div class="feature-card" style="padding: 2rem 1.5rem;">
+            <div class="feature-icon-box" style="margin: 0 auto 1.25rem auto;">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; color: var(--color-white); margin-bottom: 0.5rem;">Quick Start Manual</h3>
+            <p style="font-size: 0.85rem; color: var(--color-slate-400);">Setup guide, safety documentation, and 2-year warranty card.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+            <span>PulseFit<span class="text-mint">Pro</span></span>
+          </a>
+          <p>Engineered for endurance athletes and health enthusiasts worldwide. Inspired by Apple precision and Fitbit wellness data.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="product.html">Technical Specs</a></li>
+            <li><a href="order.html">Order & Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="order.html">Shipping Policy</a></li>
+            <li><a href="order.html">2-Year Warranty</a></li>
+            <li><a href="order.html">Order Tracking</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quiz Details</div>
+          <p style="font-size: 0.85rem; color: var(--color-slate-400); line-height: 1.6;">
+            Student: <strong>Raza Ahmad</strong><br>
+            Roll No: <strong>24l-0006</strong><br>
+            Course: <strong>CIT331 E-Commerce Lab Quiz</strong>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PulseFit Inc. All rights reserved. Designed for CIT331 Lab Quiz.</div>
+        <div>Secure 256-bit SSL Checkout</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

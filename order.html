@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFit Pro - Secure Checkout & Order</title>
+  <meta name="description" content="Complete your purchase of PulseFit Pro Smart Fitness Watch with encrypted 256-bit SSL checkout and free worldwide shipping.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div style="background: linear-gradient(90deg, #064E3B, #10B981, #064E3B); color: #080C14; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1rem; text-align: center;">
+    🚀 Launch Exclusive: Get $50 off with code <strong style="text-decoration: underline;">LAUNCH50</strong> at checkout • Free Global Priority Shipping
+  </div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PulseFit Pro Home">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <span>PulseFit<span class="text-mint">Pro</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Product Specs</a>
+        <a href="order.html" class="nav-link active">Order Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="order.html" class="cart-link-btn" aria-label="View Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+          <span class="cart-counter">1</span>
+        </a>
+        <a href="order.html" class="btn btn-primary btn-sm">Buy Now</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="product.html" class="nav-link">Product Specs & Features</a>
+      <a href="order.html" class="nav-link active">Order & Checkout</a>
+    </div>
+  </header>
+
+  <!-- Main Checkout Content -->
+  <main class="section">
+    <div class="container">
+      
+      <div class="section-title-wrap" style="text-align: left; margin-bottom: 2.5rem;">
+        <div class="badge-tag">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          Bank-Grade 256-Bit SSL Encryption
+        </div>
+        <h1 class="section-title">Complete Your <span class="text-mint">PulseFit Pro</span> Order</h1>
+        <p class="section-subtitle">Please enter your shipping address and payment method to finalize your purchase.</p>
+      </div>
+
+      <!-- 2-Column Checkout Layout -->
+      <div class="order-layout-grid">
+        
+        <!-- Left: Checkout Input Form -->
+        <div class="checkout-card">
+          <form id="checkout-form" novalidate onsubmit="handleCheckoutSubmit(event)">
+            
+            <!-- Step 1: Customer Contact Information -->
+            <div style="margin-bottom: 2.5rem;">
+              <h2 class="form-group-title">
+                <span class="form-step-badge">1</span>
+                Customer Contact Information
+              </h2>
+              <div class="form-row">
+                <div class="form-field" id="field-first-name">
+                  <label class="form-label" for="first-name">First Name *</label>
+                  <input type="text" id="first-name" class="form-input" placeholder="e.g. Raza" required>
+                  <span class="error-message">First name is required.</span>
+                </div>
+                <div class="form-field" id="field-last-name">
+                  <label class="form-label" for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" class="form-input" placeholder="e.g. Ahmad" required>
+                  <span class="error-message">Last name is required.</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field" id="field-email">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input type="email" id="email" class="form-input" placeholder="raza@example.com" required>
+                  <span class="error-message">Valid email address is required.</span>
+                </div>
+                <div class="form-field" id="field-phone">
+                  <label class="form-label" for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="+92 300 1234567" required>
+                  <span class="error-message">Phone number is required.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Shipping Destination -->
+            <div style="margin-bottom: 2.5rem;">
+              <h2 class="form-group-title">
+                <span class="form-step-badge">2</span>
+                Shipping Destination
+              </h2>
+              <div class="form-field" id="field-address">
+                <label class="form-label" for="address">Street Address *</label>
+                <input type="text" id="address" class="form-input" placeholder="House #, Street name, Apartment / Suite" required>
+                <span class="error-message">Shipping address is required.</span>
+              </div>
+              <div class="form-row">
+                <div class="form-field" id="field-city">
+                  <label class="form-label" for="city">City *</label>
+                  <input type="text" id="city" class="form-input" placeholder="e.g. Lahore" required>
+                  <span class="error-message">City is required.</span>
+                </div>
+                <div class="form-field" id="field-state">
+                  <label class="form-label" for="state">State / Province *</label>
+                  <input type="text" id="state" class="form-input" placeholder="e.g. Punjab" required>
+                  <span class="error-message">State / Province is required.</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field" id="field-postal-code">
+                  <label class="form-label" for="postal-code">Postal / ZIP Code *</label>
+                  <input type="text" id="postal-code" class="form-input" placeholder="e.g. 54000" required>
+                  <span class="error-message">Postal code is required.</span>
+                </div>
+                <div class="form-field" id="field-country">
+                  <label class="form-label" for="country">Country *</label>
+                  <select id="country" class="form-select" required>
+                    <option value="PK" selected>Pakistan</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Shipping Method Selection -->
+            <div style="margin-bottom: 2.5rem;">
+              <h2 class="form-group-title">
+                <span class="form-step-badge">3</span>
+                Select Shipping Method
+              </h2>
+              <div class="shipping-method-options">
+                <label class="shipping-radio-box active" onclick="selectShippingMethod(0, this)">
+                  <div style="display: flex; align-items: center;">
+                    <input type="radio" name="shipping-method" value="standard" checked>
+                    <div>
+                      <div style="font-weight: 700; color: var(--color-white); font-size: 0.95rem;">Standard Priority Express (3-5 Days)</div>
+                      <div style="font-size: 0.8rem; color: var(--color-slate-400);">Includes full shipment tracking and signature upon delivery</div>
+                    </div>
+                  </div>
+                  <div style="font-weight: 800; color: var(--color-mint-400); font-family: var(--font-mono);">FREE</div>
+                </label>
+
+                <label class="shipping-radio-box" onclick="selectShippingMethod(19, this)">
+                  <div style="display: flex; align-items: center;">
+                    <input type="radio" name="shipping-method" value="express">
+                    <div>
+                      <div style="font-weight: 700; color: var(--color-white); font-size: 0.95rem;">Next-Day Express Courier (24-48 Hours)</div>
+                      <div style="font-size: 0.8rem; color: var(--color-slate-400);">Priority air dispatch via DHL Express</div>
+                    </div>
+                  </div>
+                  <div style="font-weight: 800; color: var(--color-white); font-family: var(--font-mono);">+$19.00</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Secure Payment Details -->
+            <div style="margin-bottom: 2rem;">
+              <h2 class="form-group-title">
+                <span class="form-step-badge">4</span>
+                Payment Information
+              </h2>
+              <div class="form-field" id="field-card-number">
+                <label class="form-label" for="card-number">Card Number *</label>
+                <div style="position: relative;">
+                  <input type="text" id="card-number" class="form-input" placeholder="4532 •••• •••• 8912" maxlength="19" required oninput="formatCardNumber(this)">
+                  <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--color-slate-400); font-size: 0.8rem; font-weight: 700;">VISA / MC</span>
+                </div>
+                <span class="error-message">Valid 16-digit card number is required.</span>
+              </div>
+              <div class="form-field" id="field-card-name">
+                <label class="form-label" for="card-name">Name on Card *</label>
+                <input type="text" id="card-name" class="form-input" placeholder="RAZA AHMAD" required>
+                <span class="error-message">Cardholder name is required.</span>
+              </div>
+              <div class="form-row">
+                <div class="form-field" id="field-card-exp">
+                  <label class="form-label" for="card-exp">Expiration Date (MM/YY) *</label>
+                  <input type="text" id="card-exp" class="form-input" placeholder="12/28" maxlength="5" required oninput="formatExpiry(this)">
+                  <span class="error-message">Valid expiration (MM/YY) required.</span>
+                </div>
+                <div class="form-field" id="field-card-cvv">
+                  <label class="form-label" for="card-cvv">Security Code (CVV) *</label>
+                  <input type="password" id="card-cvv" class="form-input" placeholder="•••" maxlength="4" required>
+                  <span class="error-message">3 or 4-digit CVV required.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button inside Form for mobile ease -->
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Complete Secure Purchase
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Order Summary Sidebar -->
+        <div class="order-summary-card">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--color-white); margin-bottom: 1.25rem;">
+            Order Summary
+          </h2>
+
+          <!-- Cart Item Preview with Real Asset Loader -->
+          <div class="cart-item-preview">
+            <div class="cart-item-thumb">
+              <img id="cart-item-img" 
+                   src="assets/hero-watch.svg" 
+                   alt="PulseFit Pro" 
+                   onerror="this.src='assets/product.png'; this.onerror=function(){ this.src='assets/hero.png'; this.onerror=function(){ this.src='assets/watch.png'; this.onerror=function(){ this.src='product.png'; this.onerror=function(){ this.src='watch.png'; this.onerror=function(){ this.src='hero.png'; } } } };">
+            </div>
+            <div class="cart-item-details">
+              <div class="cart-item-title">PulseFit Pro</div>
+              <div class="cart-item-variant" id="cart-variant-label">Finish: Midnight Slate • Sport Band</div>
+              <div class="cart-item-price" id="cart-item-price-display">$299.00</div>
+            </div>
+          </div>
+
+          <!-- Coupon Code Input -->
+          <div class="coupon-row">
+            <input type="text" id="coupon-code-input" class="coupon-input" placeholder="Discount Code (e.g. LAUNCH50)">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="applyCouponCode()">Apply</button>
+          </div>
+          <div id="coupon-msg" style="font-size: 0.8rem; margin-top: -1rem; margin-bottom: 1.25rem; display: none;"></div>
+
+          <!-- Price Line Items -->
+          <div class="summary-line-item">
+            <span>Subtotal</span>
+            <span id="summary-subtotal" style="font-family: var(--font-mono);">$299.00</span>
+          </div>
+          <div class="summary-line-item">
+            <span>Strap Upgrade</span>
+            <span id="summary-strap-cost" style="font-family: var(--font-mono);">$0.00</span>
+          </div>
+          <div class="summary-line-item">
+            <span>Estimated Shipping</span>
+            <span id="summary-shipping" style="color: var(--color-mint-400); font-family: var(--font-mono);">FREE</span>
+          </div>
+          <div class="summary-line-item" id="summary-discount-row" style="display: none; color: var(--color-mint-400);">
+            <span>Launch Coupon Applied</span>
+            <span id="summary-discount-val" style="font-family: var(--font-mono);">-$50.00</span>
+          </div>
+          <div class="summary-line-item">
+            <span>Taxes (Included)</span>
+            <span style="font-family: var(--font-mono);">$0.00</span>
+          </div>
+
+          <div class="summary-line-total">
+            <span>Total Due</span>
+            <span class="total-amount" id="summary-final-total">$299.00</span>
+          </div>
+
+          <!-- Guarantees -->
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.85rem; color: var(--color-slate-400);">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--color-mint-400);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>30-day no-questions-asked refund guarantee</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--color-mint-400);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Includes 2-Year official warranty coverage</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--color-mint-400);"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Dispatched from nearest regional distribution hub</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal-backdrop" id="confirmation-modal">
+    <div class="modal-box">
+      <div class="modal-icon-wrap">
+        <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h2 class="modal-title">Payment Confirmed!</h2>
+      <p class="modal-text">
+        Thank you for your order, <strong id="modal-customer-name" style="color: var(--color-white);">Customer</strong>! Your PulseFit Pro is being prepared for immediate dispatch.
+      </p>
+      
+      <div class="modal-order-number">
+        Tracking Reference: <span id="modal-order-id">PF-89412</span>
+      </div>
+
+      <div style="text-align: left; background: rgba(11, 15, 25, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border); margin-bottom: 2rem; font-size: 0.85rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span style="color: var(--color-slate-400);">Product:</span>
+          <span style="font-weight: 700; color: var(--color-white);" id="modal-product-summary">PulseFit Pro</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span style="color: var(--color-slate-400);">Amount Paid:</span>
+          <span style="font-weight: 800; color: var(--color-mint-400); font-family: var(--font-mono);" id="modal-amount-paid">$249.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--color-slate-400);">Delivery Estimate:</span>
+          <span style="color: var(--color-white);">3-5 Business Days</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a href="index.html" class="btn btn-primary btn-block">Return to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+            <span>PulseFit<span class="text-mint">Pro</span></span>
+          </a>
+          <p>Engineered for endurance athletes and health enthusiasts worldwide. Inspired by Apple precision and Fitbit wellness data.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="product.html">Technical Specs</a></li>
+            <li><a href="order.html">Order & Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="order.html">Shipping Policy</a></li>
+            <li><a href="order.html">2-Year Warranty</a></li>
+            <li><a href="order.html">Order Tracking</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Quiz Details</div>
+          <p style="font-size: 0.85rem; color: var(--color-slate-400); line-height: 1.6;">
+            Student: <strong>Raza Ahmad</strong><br>
+            Roll No: <strong>24l-0006</strong><br>
+            Course: <strong>CIT331 E-Commerce Lab Quiz</strong>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PulseFit Inc. All rights reserved. Designed for CIT331 Lab Quiz.</div>
+        <div>Secure 256-bit SSL Checkout</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
